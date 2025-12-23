@@ -1,0 +1,354 @@
+AUVIK@LAPTOP-M7O4RPJO MINGW64 / (master)
+$ mkdir assignment2
+mkdir: cannot create directory ‘assignment2’: File exists
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 / (master)
+$ mkdir ass2
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 / (master)
+$ cd ass2
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git init
+Initialized empty Git repository in D:/Git/ass2/.git/
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git branch -M master
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ echo "Do or do not, there is no try." > 1.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git add 1.txt
+warning: in the working copy of '1.txt', LF will be replaced by CRLF the next time Git touches it
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git commit -m "Added 1.txt with Yoda quote"
+[master (root-commit) ded2d7d] Added 1.txt with Yoda quote
+ 1 file changed, 1 insertion(+)
+ create mode 100644 1.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ echo "Keep your friends close, but your enemies closer." > 2.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git add 2.txt
+warning: in the working copy of '2.txt', LF will be replaced by CRLF the next time Git touches it
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git commit -m "Added 2.txt with Godfather quote"
+[master 76c2351] Added 2.txt with Godfather quote
+ 1 file changed, 1 insertion(+)
+ create mode 100644 2.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ echo "Get busy living, or get busy dying." > 3.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git add 3.txt
+warning: in the working copy of '3.txt', LF will be replaced by CRLF the next time Git touches it
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git commit -m "Added 3.txt with Shawshank quote"
+[master 27dfb29] Added 3.txt with Shawshank quote
+ 1 file changed, 1 insertion(+)
+ create mode 100644 3.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ echo "It's not who I am underneath, but what I do that defines me." > 4.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ ^[[200~
+bash: $'\E[200~': command not found
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git add 4.txt
+warning: in the working copy of '4.txt', LF will be replaced by CRLF the next time Git touches it
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git commit -m "Added 4.txt with Batman quote"
+[master 9b1196b] Added 4.txt with Batman quote
+ 1 file changed, 1 insertion(+)
+ create mode 100644 4.txt
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ echo "I find your lack of faith disturbing." > 5.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git add 5.txt
+warning: in the working copy of '5.txt', LF will be replaced by CRLF the next time Git touches it
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git commit -m "Added 5.txt with Vader quote"
+[master b758be5] Added 5.txt with Vader quote
+ 1 file changed, 1 insertion(+)
+ create mode 100644 5.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git remote add origin https://github.com/AuvikDas/Assignment2.git
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git push -u origin master
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (15/15), 1.27 KiB | 217.00 KiB/s, done.
+Total 15 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/AuvikDas/Assignment2.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git checkout -b feature-rename-files
+Switched to a new branch 'feature-rename-files'
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git mv 1.txt yoda.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git mv 2.txt godfather.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git mv 3.txt shawshank.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git mv 4.txt batman.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git mv 5.txt vader.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git commit -m "Renamed files to character names"
+[feature-rename-files ea08354] Renamed files to character names
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ rename 4.txt => batman.txt (100%)
+ rename 2.txt => godfather.txt (100%)
+ rename 3.txt => shawshank.txt (100%)
+ rename 5.txt => vader.txt (100%)
+ rename 1.txt => yoda.txt (100%)
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git merge feature-rename-files
+Updating b758be5..ea08354
+Fast-forward
+ 4.txt => batman.txt    | 0
+ 2.txt => godfather.txt | 0
+ 3.txt => shawshank.txt | 0
+ 5.txt => vader.txt     | 0
+ 1.txt => yoda.txt      | 0
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ rename 4.txt => batman.txt (100%)
+ rename 2.txt => godfather.txt (100%)
+ rename 3.txt => shawshank.txt (100%)
+ rename 5.txt => vader.txt (100%)
+ rename 1.txt => yoda.txt (100%)
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 371 bytes | 185.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/AuvikDas/Assignment2.git
+   b758be5..ea08354  master -> master
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ echo "No try there is, do or do not." > yoda.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git add yoda.txt
+warning: in the working copy of 'yoda.txt', LF will be replaced by CRLF the next time Git touches it
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git commit -m "Updated Yoda quote on master"
+[master d9481cf] Updated Yoda quote on master
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ echo "Keep your enemies close, but your friends distant." > godfather.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git add godfather.txt
+warning: in the working copy of 'godfather.txt', LF will be replaced by CRLF the next time Git touches it
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (master)
+$ git commit -m "Updated Godfather quote on master"
+[master ccd2558] Updated Godfather quote on master
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[detached HEAD a50d48f] Uppercase Yoda quote on feature branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Auto-merging godfather.txt
+CONFLICT (content): Merge conflict in godfather.txt
+error: could not apply 80b4082... Uppercase Godfather quote on feature branch
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+Could not apply 80b4082... # Uppercase Godfather quote on feature branch
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files|REBASE 2/2)
+$ git checkout --ours godfather.txt
+Updated 1 path from the index
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files|REBASE 2/2)
+$ git add godfather.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files|REBASE 2/2)
+$ git rebase --continue
+Successfully rebased and updated refs/heads/feature-rename-files.
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ echo "DO OR DO NOT, THERE IS NO TRY." > yoda.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git add yoda.txt
+warning: in the working copy of 'yoda.txt', LF will be replaced by CRLF the next time Git touches it
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git commit -m "Uppercase Yoda quote on feature branch"
+On branch feature-rename-files
+nothing to commit, working tree clean
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git rebase master
+Current branch feature-rename-files is up to date.
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git checkout --theirs yoda.txt
+Updated 0 paths from the index
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git add yoda.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git add yoda.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git rebase --continue
+fatal: no rebase in progress
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git push origin feature-rename-files --force
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 305 bytes | 305.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/AuvikDas/Assignment2.git
+   b758be5..a50d48f  feature-rename-files -> feature-rename-files
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ mkdir Ass
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ cat <<EOF > Assignment/git-commands.txt
+git init
+git clone <repo-url>
+git add .
+git status
+git branch branch-name
+git checkout branch-name
+git reset
+git fetch
+git pull
+git cherry-pick 092018283103810930
+git push origin branch-name
+git push origin --delete branch-name
+git rebase -i branch-name
+EOF
+bash: Assignment/git-commands.txt: No such file or directory
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ ^[[200~cat <<EOF > Assignment/git-commands.txt
+> git init
+> git clone <repo-url>
+> git add .
+> git status
+> git branch branch-name
+> git checkout branch-name
+> git reset
+> git fetch
+> git pull
+> git cherry-pick 092018283103810930
+> git push origin branch-name
+> git push origin --delete branch-name
+> git rebase -i branch-name
+>
+> dsa
+> git add yoda.txt
+> :q!
+> EOF
+bash: Assignment/git-commands.txt: No such file or directory
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ cat <<EOF > Ass/git-commands.txt
+git init
+git clone <repo-url>
+git add .
+git status
+git branch branch-name
+git checkout branch-name
+git reset
+git fetch
+git pull
+git cherry-pick 092018283103810930
+git push origin branch-name
+git push origin --delete branch-name
+git rebase -i branch-name
+EOF
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-rename-files)
+$ git checkout -b feature-assignment
+Switched to a new branch 'feature-assignment'
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-assignment)
+$ git add Ass
+warning: in the working copy of 'Ass/git-commands.txt', LF will be replaced by CRLF the next time Git touches it
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-assignment)
+$ git commit -m "Added Assignment folder"
+[feature-assignment 786d1f8] Added Assignment folder
+ 1 file changed, 13 insertions(+)
+ create mode 100644 Ass/git-commands.txt
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-assignment)
+$ git push origin feature-assignment
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 459 bytes | 229.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/AuvikDas/Assignment2.git
+   ccd2558..786d1f8  feature-assignment -> feature-assignment
+
+AUVIK@LAPTOP-M7O4RPJO MINGW64 /ass2 (feature-assignment)
+$ git log --oneline --graph --all
+* 786d1f8 (HEAD -> feature-assignment, origin/feature-assignment) Added Assignment folder
+* a50d48f (origin/feature-rename-files, feature-rename-files) Uppercase Yoda quote on feature branch
+* ccd2558 (origin/master, master) Updated Godfather quote on master
+* d9481cf Updated Yoda quote on master
+* ea08354 Renamed files to character names
+* b758be5 Added 5.txt with Vader quote
+* 9b1196b Added 4.txt with Batman quote
+* 27dfb29 Added 3.txt with Shawshank quote
+* 76c2351 Added 2.txt with Godfather quote
+* ded2d7d Added 1.txt with Yoda quote

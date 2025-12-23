@@ -1,0 +1,13 @@
+git init
+git clone <repo-url>
+git add .
+git status
+git branch branch-name
+git checkout branch-name
+git reset
+git fetch
+git pull
+git cherry-pick 092018283103810930
+git push origin branch-name
+git push origin --delete branch-name
+git rebase -i branch-name
